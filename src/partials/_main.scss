@@ -1,0 +1,101 @@
+.application {
+    display: none;
+}
+
+header {
+    width: 100vw;
+    padding: 1%;
+    background: rgb(110, 135, 173);
+    text-shadow: 3px 3px 3px $blackColor;
+    z-index: 5;
+
+    i {
+        @include fluid-type (2.5rem, 4rem, 360px, 1280px);
+    }
+
+    button{ 
+        float: right;
+        position: relative;
+        top: -100%;
+        color: white;
+        @include fluid-type (1.8rem, 2.5rem, 360px, 1280px);
+        text-shadow: 3px 3px 3px $blackColor;
+        width: 100px;
+    }
+}
+
+.asideButtonContainer {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 1%;
+    top: 10%;
+    z-index: 10;
+
+    h3 {
+        margin-left: 6%;
+        margin-top: 1%;
+        width: 200px;
+    }
+}
+
+.blueFont {
+    color: rgb(0, 101, 253);
+    text-shadow: 0.5px 0.5px white,
+    -0.5px 0.5px white,
+    0.5px -0.5px white,
+    -0.5px -0.5px white;
+    font-weight: bold;
+}
+
+.instrIcon {
+    margin: 1%;
+    z-index: 10;
+}
+
+.instrIcon:active, .instrIcon:focus, .instrIcon:hover {
+    transform: rotate(360deg);
+    transition: all 1s ease-in-out;
+}
+
+aside {
+    background: url(./../assets/boris-misevic-cQltbypBFvg-unsplash.jpg);
+    background-color: rgb(12, 88, 175);
+    background-size: cover;
+    background-position: center;
+    width: 360px;
+    height: 95%;
+    box-shadow: 3px 3px 3px $blackColor;
+    padding-top: calc(10rem - 1.5vw);
+    position: absolute;
+    z-index: 1;
+}
+
+.sideDrawer.open {
+        transform: translateX(-105%);
+}
+
+.sideDrawer {
+    width: 30%;
+    min-width: 320px;
+    
+    .instrContainer {
+        width: 72%;
+        margin: 0 auto;
+        padding: 5%;
+        background: rgba(255, 255, 255, 0.507);;
+        border-radius: 25px;
+        box-shadow: 2px 2px 2px $blackColor;
+
+        h2 {
+            text-align: center;
+            display: inline-block;
+            width: 100%;
+        }
+
+        i {
+            font-size: 1.5rem;
+            color: black;
+        }
+    }
+}
